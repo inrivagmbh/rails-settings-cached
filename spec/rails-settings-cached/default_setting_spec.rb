@@ -21,7 +21,7 @@ describe RailsSettings::Default do
 
     it 'should work when Rails.cache not initialized' do
       allow(Rails).to receive(:cached).and_return(nil)
-      allow(Rails).to receive(:initialized?).and_return(false)
+      #allow(Rails).to receive(:initialized?).and_return(false)
       expect(OtherSettingWithYML.str).to eq 'hello in test'
     end
   end
